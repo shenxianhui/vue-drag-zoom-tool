@@ -1,11 +1,15 @@
 {
-  "name": "vue-drag-zoom",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/DragZoom.vue",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "shenxh",
-  "license": "ISC"
+	"name": "vue-drag-zoom",
+	"version": "1.0.1",
+	"description": "",
+	"main": "src/DragZoom.vue",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "shenxh",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shenxianhui/vue-drag-zoom"
+	}
 }
