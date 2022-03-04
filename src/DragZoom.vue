@@ -2,7 +2,7 @@
  * @Author: shenxh
  * @Date: 2020-07-10 16:40:30
  * @LastEditors: shenxh
- * @LastEditTime: 2022-03-01 18:38:23
+ * @LastEditTime: 2022-03-04 11:24:31
  * @Description: 组件-拖动缩放
 -->
 
@@ -229,6 +229,13 @@ export default {
 
 		// 鼠标滚轮事件
 		mousescroll(evt) {
+			// 阻止默认行为
+			if (evt.preventDefault) {
+				evt.preventDefault();
+			} else {
+				evt.returnValue = false;
+			}
+
 			const { deltaY } = evt;
 			const {
 				left: areaL,

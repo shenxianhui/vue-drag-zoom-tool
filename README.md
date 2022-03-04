@@ -1,6 +1,7 @@
 # 拖动缩放组件
 
 ## 说明
+
 该组件适用于对一个元素在某个区域内进行拖动/缩放
 
 ## 安装
@@ -67,23 +68,22 @@ export default {
 
 ### Attributes
 
-| 参数       | 说明                                     | 类型           | 可选值 | 默认值 |
-| ---------- | ---------------------------------------- | -------------- | ------ | ------ |
-| left       | 被操作的元素 X 坐标                      | number         | -      | 0      |
-| top        | 被操作的元素 Y 坐标                      | number         | -      | 0      |
-| width      | 被操作的元素宽度                         | number         | -      | -      |
-| height     | 被操作的元素高度                         | number         | -      | -      |
-| allowZoom  | 允许缩放                                 | boolean        | true   | false  |
-| zoom       | 缩放比例                                 | number         | -      | 1      |
-| maxZoom    | 最大缩放比例                             | number         | -      | 2      |
-| minZoom    | 最小缩放比例                             | number         | -      | 0.5    |
-| range      | 缩放幅度                                 | number         | -      | 0.1    |
-| areaNode   | 活动区域节点                             | HTMLDivElement | -      | -      |
-| areaLeft   | 活动区域 X 坐标 (未设置 areaNode 时生效) | number         | -      | 0      |
-| areaTop    | 活动区域 Y 坐标 (未设置 areaNode 时生效) | number         | -      | 0      |
-| areaWidth  | 活动区域宽度 (未设置 areaNode 时生效)    | number         | -      | 200    |
-| areaHeight | 活动区域高度 (未设置 areaNode 时生效)    | number         | -      | 100    |
-|            |                                          |                |        |        |
+| 参数        | 说明                                      | 类型           | 可选值 | 默认值 |
+| ----------- | ----------------------------------------- | -------------- | ------ | ------ |
+| left        | 被操作的元素 X 坐标                       | number         | -      | 0      |
+| top         | 被操作的元素 Y 坐标                       | number         | -      | 0      |
+| width       | 被操作的元素宽度                          | number         | -      | -      |
+| height      | 被操作的元素高度                          | number         | -      | -      |
+| allow-zoom  | 允许缩放                                  | boolean        | true   | false  |
+| zoom        | 缩放比例                                  | number         | -      | 1      |
+| max-zoom    | 最大缩放比例                              | number         | -      | 2      |
+| min-zoom    | 最小缩放比例                              | number         | -      | 0.5    |
+| range       | 缩放幅度                                  | number         | -      | 0.1    |
+| area-node   | 活动区域节点                              | HTMLDivElement | -      | -      |
+| area-left   | 活动区域 X 坐标 (未设置 area-node 时生效) | number         | -      | 0      |
+| area-top    | 活动区域 Y 坐标 (未设置 area-node 时生效) | number         | -      | 0      |
+| area-width  | 活动区域宽度 (未设置 area-node 时生效)    | number         | -      | 200    |
+| area-height | 活动区域高度 (未设置 area-node 时生效)    | number         | -      | 100    |
 
 ### Events
 
@@ -91,3 +91,7 @@ export default {
 | ----------- | -------------------- | ----- |
 | mousemove   | 当鼠标拖动元素时触发 | event |
 | mousescroll | 当元素缩放时触发     | event |
+
+## 备注
+
+有任何 bug 或优化建议, 留言至 GitHub 即可, 感谢您的使用!
