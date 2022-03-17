@@ -1,5 +1,9 @@
 # 拖动缩放组件
 
+## 示例
+
+![](https://gitee.com/shenxianhui/xx-static/raw/master/img/20220317-drag_demo.gif)
+
 ## 说明
 
 该组件适用于对一个元素在某个区域内进行拖动/缩放
