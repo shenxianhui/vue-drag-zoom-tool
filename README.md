@@ -2,7 +2,7 @@
 
 ## 示例
 
-![](https://gitee.com/shenxianhui/xx-static/raw/master/img/20220317-drag_demo.gif)
+![](https://p0.meituan.net/dpgroup/5141cec87731cd5b0ca87533d507f2ba2939131.gif)
 
 ## 说明
 
