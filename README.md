@@ -1,12 +1,12 @@
 # 拖动缩放组件
 
-## 示例
-
-![](https://p0.meituan.net/dpgroup/5141cec87731cd5b0ca87533d507f2ba2939131.gif)
-
 ## 说明
 
 该组件适用于对一个元素在某个区域内进行拖动/缩放
+
+## 示例
+
+![](https://p0.meituan.net/dpgroup/5141cec87731cd5b0ca87533d507f2ba2939131.gif)
 
 ## 安装
 
