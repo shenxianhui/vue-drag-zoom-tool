@@ -2,7 +2,7 @@
  * @Author: shenxh
  * @Date: 2020-07-10 16:40:30
  * @LastEditors: shenxh
- * @LastEditTime: 2022-03-04 11:24:31
+ * @LastEditTime: 2022-03-28 19:36:11
  * @Description: 组件-拖动缩放
 -->
 
@@ -84,6 +84,8 @@ export default {
 	data() {
 		return {
 			currentZoom: this.zoom,
+			initLeft: this.left,
+			initTop: this.top,
 		};
 	},
 	computed: {
@@ -118,8 +120,8 @@ export default {
 		dragZoomNodeStyle() {
 			return {
 				transform: `scale(${this.currentZoom})`,
-				left: `${this.left}px`,
-				top: `${this.top}px`,
+				left: `${this.initLeft}px`,
+				top: `${this.initTop}px`,
 				width: this.width + 'px',
 				height: this.height + 'px',
 			};
@@ -130,6 +132,8 @@ export default {
 	mounted() {
 		this.dragZoomNode.addEventListener('mousedown', this.mousedown);
 		this.dragZoomNode.addEventListener('wheel', this.mousescroll);
+
+		this.initStyle();
 	},
 	beforeDestroy() {
 		this.dragZoomNode.removeEventListener('mousedown', null);
@@ -323,6 +327,22 @@ export default {
 			}
 
 			this.$emit('mousescroll', evt);
+		},
+
+		// 样式初始化
+		initStyle() {
+			let tmpLeft = this.left;
+			let tmpTop = this.top;
+			const {
+				offsetWidth: dragW,
+				offsetHeight: dragH,
+			} = this.dragZoomNode;
+
+			tmpLeft = this.left - (dragW * (1 - this.zoom)) / 2;
+			tmpTop = this.left - (dragH * (1 - this.zoom)) / 2;
+
+			this.initLeft = tmpLeft;
+			this.initTop = tmpTop;
 		},
 	},
 };
