@@ -2,7 +2,7 @@
  * @Author: shenxh
  * @Date: 2020-07-10 16:40:30
  * @LastEditors: shenxh
- * @LastEditTime: 2022-03-28 19:36:11
+ * @LastEditTime: 2022-03-29 10:12:36
  * @Description: 组件-拖动缩放
 -->
 
@@ -127,7 +127,13 @@ export default {
 			};
 		},
 	},
-	watch: {},
+	watch: {
+		zoom(val) {
+			this.currentZoom = val;
+
+			this.initStyle();
+		},
+	},
 	created() {},
 	mounted() {
 		this.dragZoomNode.addEventListener('mousedown', this.mousedown);
@@ -333,10 +339,7 @@ export default {
 		initStyle() {
 			let tmpLeft = this.left;
 			let tmpTop = this.top;
-			const {
-				offsetWidth: dragW,
-				offsetHeight: dragH,
-			} = this.dragZoomNode;
+			const { offsetWidth: dragW, offsetHeight: dragH } = this.dragZoomNode;
 
 			tmpLeft = this.left - (dragW * (1 - this.zoom)) / 2;
 			tmpTop = this.left - (dragH * (1 - this.zoom)) / 2;
