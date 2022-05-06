@@ -2,7 +2,7 @@
  * @Author: shenxh
  * @Date: 2020-07-10 16:40:30
  * @LastEditors: shenxh
- * @LastEditTime: 2022-04-07 11:07:32
+ * @LastEditTime: 2022-05-06 10:32:10
  * @Description: 组件-拖动缩放
 -->
 
@@ -355,6 +355,6 @@ export default {
 .xx-drag-zoom {
   position: absolute;
   user-select: none;
-  cursor: move;
+  cursor: grab;
 }
 </style>
