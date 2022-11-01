@@ -2,7 +2,7 @@
  * @Author: shenxh
  * @Date: 2020-07-10 16:40:30
  * @LastEditors: shenxh
- * @LastEditTime: 2022-05-06 10:32:10
+ * @LastEditTime: 2022-11-01 10:46:20
  * @Description: 组件-拖动缩放
 -->
 
@@ -342,7 +342,7 @@ export default {
       const { offsetWidth: dragW, offsetHeight: dragH } = this.dragZoomNode;
 
       tmpLeft = this.left - (dragW * (1 - this.zoom)) / 2;
-      tmpTop = this.left - (dragH * (1 - this.zoom)) / 2;
+      tmpTop = this.top - (dragH * (1 - this.zoom)) / 2;
 
       this.initLeft = tmpLeft;
       this.initTop = tmpTop;
